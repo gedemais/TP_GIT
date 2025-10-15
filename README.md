@@ -137,10 +137,56 @@ Pour que tous les membres de l'équipe soient à jour sur les dernières modific
 
 
 
-## 🧭 Étape 3 : Interface utilisateur
+## 🧭 Étape 3 : Interface utilisateur et fonctionnement interne
 
-C'est bien beau de créer une seule branche pour que tout le monde travaille dessus, mais en pratique ça peut souvent provoquer des conflits, en particulier lorsque l'on travaille à plusieurs sur les mêmes fichiers !<br/>
-Pour éviter ce genre de problème, on créé généralement une branche par fonctionnalité de notre programme, sur laquelle une seule personne va travailler à la fois.
-Cette méthodologie permet de minimiser les conflits pendant l'implémentation de nouvelles fonctionnalités, et de regrouper leurs résolutions au moment de la pull request.
+- C'est bien beau de créer une seule branche pour que tout le monde travaille dessus, mais en pratique ça peut souvent provoquer des conflits, en particulier lorsque l'on travaille à plusieurs sur les mêmes fichiers !
+- Pour éviter ce genre de problème, on créé généralement une branche par fonctionnalité de notre programme, sur laquelle une seule personne va travailler à la fois.
+- Cette méthodologie permet de minimiser les conflits pendant l'implémentation de nouvelles fonctionnalités, et de regrouper leurs résolutions au moment de la pull request. Nous allons donc l'utiliser pour implémenter l'UI (User Interface) de notre visualisateur du jeu de la vie.
+
+### 1. Création des branches
+- L'initiateur créé une nouvelle branche feature/ui_html
+- L'assureur créé une nouvelle branche feature/ui_css
+
+#### Les deux étapes suivantes peuvent être réalisées en même temps.
+
+### 2. Implémentation du panneau de contrôle
+
+- L'initiateur modifie index.html pour ajouter un panneau de contrôle :
+
+```
+<div id="controls">
+  <label>Hauteur: <input id="height" type="number" value="20"></label>
+  <label>Largeur: <input id="width" type="number" value="20"></label>
+  <label>Cycles/sec: <input id="speed" type="number" value="5"></label>
+  <button id="startBtn">▶️ Démarrer</button>
+  <button id="pauseBtn">⏸️ Pause</button>
+</div>
+```
+
+- Puis, il ajoute le fichier index.html à l'index
+- Créé un nouveau commit pour enregistrer les changements
+- Tire les derniers changements pour s'assurer d'être à jour
+- Et finalement, pousse son commit sur le répo distant
+
+
+### 3. Amélioration du style du panneau de contrôle
+
+- L'assureur modifie style.css pour styliser le panneau de contrôle :
+
+```
+#controls {
+  margin: 20px;
+}
+
+#controls label {
+  margin: 0 10px;
+}
+
+```
+
+- Puis, il ajoute le fichier style.css à l'index
+- Créé un nouveau commit pour enregistrer les changements
+- Tire les derniers changements pour s'assurer d'être à jour
+- Et finalement, pousse son commit sur le répo distant
 
 
