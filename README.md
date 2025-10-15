@@ -133,19 +133,20 @@ Pour que tous les membres de l'équipe soient à jour sur les dernières modific
 ### 2. Vérification et validation de la pull request
 - Les trois membres de l'équipe passent en revue les modifications apportées par la branche ```feature/setup```, en vérifiant que chaque membre y a bien ajouté le bon fichier avec le bon contenu.
 - Une fois les vérifications effectuées, chaque membre de l'équipe doit vérifier la pull request
-- Une fois la pull request vérifiée, l'initiateur se charge de la valider.
-
-
+- Une fois la pull request vérifiée, l'initiateur se charge de la valider, ce qui déclenchera automatiquement la fusion de la branche ```feature/setup``` vers la branche ```main```.
+- Tous les membres de l'équipe peuvent ensuite tirer les modifications effectuées, puis se rendre sur main afin de lancer index.html et de voir le résultat du setup dans leur navigateur.
 
 ## 🧭 Étape 3 : Interface utilisateur et fonctionnement interne
 
 - C'est bien beau de créer une seule branche pour que tout le monde travaille dessus, mais en pratique ça peut souvent provoquer des conflits, en particulier lorsque l'on travaille à plusieurs sur les mêmes fichiers !
 - Pour éviter ce genre de problème, on créé généralement une branche par fonctionnalité de notre programme, sur laquelle une seule personne va travailler à la fois.
 - Cette méthodologie permet de minimiser les conflits pendant l'implémentation de nouvelles fonctionnalités, et de regrouper leurs résolutions au moment de la pull request. Nous allons donc l'utiliser pour implémenter l'UI (User Interface) de notre visualisateur du jeu de la vie.
+- Afin d'éviter de directement fusionner nos fonctionnalités fraîchement implémentées (et non testées), à notre branche principale (main), on crée une branche intermédiaire appelée ```dev``` qui servira d'espace de test, pour s'assurer du bon fonctionnement de nos fonctionnalités avant de les incorporer à notre produit final.
 
 ### 1. Création des branches
-- L'initiateur créé une nouvelle branche feature/ui_html
-- L'assureur créé une nouvelle branche feature/ui_css
+- L'initiateur créé une nouvelle branche dev
+- L'assureur tire les changements, se rend sur la branche dev, et créé une nouvelle branche feature/ui_html (qui partira donc de ```dev```, et non de ```main```)
+- Le réparateur tire les changements, se rend sur la branche dev, et créé une nouvelle branche feature/ui_css (qui partira donc de ```dev```, et non de ```main```)
 
 #### Les deux étapes suivantes peuvent être réalisées en même temps.
 
@@ -189,4 +190,8 @@ Pour que tous les membres de l'équipe soient à jour sur les dernières modific
 - Tire les derniers changements pour s'assurer d'être à jour
 - Et finalement, pousse son commit sur le répo distant
 
+### 4. Pull Requests
 
+- L'initiateur créé deux pull requests, une pour la branche ```feature/ui_html``` vers ```dev```, et une pour la branche ```feature/ui_css``` vers ```dev```
+- Tous les membres de l'équipe vérifient ces deux pull requests, puis le l'initiateur s'occupe de les valider. 
+- Une fois la pull request validée, tous les membres de l'équipe tirent les modifications, et peuvent lancer index.html pour constater l'évolution du produit grâce à l'implémentation des nouvelles fonctionnalités.
