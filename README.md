@@ -459,4 +459,32 @@ Il aurait aussi été de bon augure de tester la fonctionnalité avant de la fus
 L'avantage d'utiliser des branches séparées pour nos fonctionnalités, et de les avoir créées à partir de dev, c'est qu'on peut facilement annuler les changements qu'elle a apporté, ou bien les réparer avec une autre branche, sans publier le bug sur main !
 </details>
 
+## 5. Fix (réparation)
+
+Pour réparer son erreur, le réparateur va devoir créer une nouvelle branche partant de ```dev```, sur laquelle il va résoudre le problème et tester le bon fonctionnement de la feature, avant d'ouvrir une pull request pour la merge.
+
+Nous utilisions jusqu'ici le préfixe ```feature/``` pour nommer nos branches, afin de clarifier le fait que ces branches concernaient l'implémentation de nouvelles fonctionnalités. Le réparateur devra, pour cette branche, utiliser le préfixe ```fix/``` pour signifier que cette branche sert à effectuer une réparation de bug.
+
+L'utilisation de ces préfixes n'est pas obligatoire d'un point de vue **technique**, mais elle est fortement recommandée et adoptée par une majorité de développeurs car elle permet une lecture plus claire de l'historique d'un projet git.
+
+### 1. Réparation
+
+- Le réparateur créé une branche ```fix/create_grid_parameter``` à partir de ```dev```
+- Il modifie le code afin de réparer son erreur :
+```
+createGrid(false); // grille aléatoire
+```
+
+- Puis, il ajoute le fichier script.js à l'index
+- Créé un nouveau commit pour enregistrer les changements
+- Tire les derniers changements pour s'assurer d'être à jour
+- Et finalement, pousse son commit sur le répo distant
+
+### 2. Pull request
+- L'initiateur créé une pull request pour ```fix/create_grid_parameter``` vers ```dev``` avec les modalités habituelles.
+- L'ensemble de l'équipe review le changement apporté par la branche (et peut même laisser un commentaire sous la ligne modifiée pour le charrier un peu), avant de valider la PR.
+- L'initiateur valide la PR
+- Tout le monde tire les modifications et lance index.html pour tester...
+
+<img width="360" height="203" alt="ca-marche-vraiment-feldup" src="https://github.com/user-attachments/assets/459a0ee8-8807-4022-8cf7-a8f8d5ed0621" />
 
