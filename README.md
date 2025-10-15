@@ -431,9 +431,32 @@ function createGrid(empty = true) {
 }
 ```
 
-On peut également constater sur la ligne suivante que chaque cellule de la grid est mise à 0, ce qui correspond à une cellule morte, lorsque le paramètre empty est à true :
+On peut également constater sur la ligne suivante que chaque cellule de la grille est mise à 0, ce qui correspond à une cellule morte, lorsque le paramètre empty est à true :
 
 ```
 grid[r][c] = empty ? 0 : (Math.random() < 0.5 ? 1 : 0); // Si empty est vrai, la cellule vaut 0. Sinon, elle a une chance sur deux d'être vivante.
 ```
+
+Mais... on l'appelle bel et bien avec empty = true en fin de script !
+```
+createGrid(true); // <- Pourquoi ??
+```
+Pourquoi est-ce que le réparateur a fait ça ?
+
+<details>
+<summary>Réponse rapide</summary>
+Photo du réparateur pendant l'implémentation de la logique du jeu de la vie :
+
+![61129](https://github.com/user-attachments/assets/59186fa1-a32d-4582-83b0-59be0709eee7)
+
+Comme on peut le constater, c'est une quiche !
+</details>
+
+<details>
+<summary>Réponse honnête</summary>
+Ca arrive beaucoup plus souvent qu'on peut le penser de faire des bêtises, surtout en implémentant de nouveaux algorithmes. C'est pourquoi il est important de prendre son temps, et d'isoler les changements en utilisant des branches !
+Il aurait aussi été de bon augure de tester la fonctionnalité avant de la fusionner à la branche dev.
+L'avantage d'utiliser des branches séparées pour nos fonctionnalités, et de les avoir créées à partir de dev, c'est qu'on peut facilement annuler les changements qu'elle a apporté, ou bien les réparer avec une autre branche, sans publier le bug sur main !
+</details>
+
 
