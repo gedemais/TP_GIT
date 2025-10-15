@@ -393,10 +393,13 @@ document.addEventListener("DOMContentLoaded", () => {
 - Les membres de l'équipe la review et la vérifie, puis l'initiateur la valide.
 - Tout le monde tire les changements et se rend sur ```dev``` pour lancer index.html histoire tester la nouvelle fonctionnalité...
 
-![200w](https://github.com/user-attachments/assets/f8d12336-4cee-4c1c-83fc-8158add8a771)
+<details>
+  <summary>Click me</summary>
+  ![200w](https://github.com/user-attachments/assets/f8d12336-4cee-4c1c-83fc-8158add8a771)
 
-## Ca ne marche pas...
+  ## Ca ne marche pas...
 
-Sacrebleu. Le réparateur était pourtant sûr d'avoir correctement implémenté la logique du jeu de la vie ! Alors, pourquoi rien ne se passe à l'écran lorsque la page s'ouvre ?
+  Sacrebleu. Le réparateur était pourtant sûr d'avoir correctement implémenté la logique du jeu de la vie ! Alors, pourquoi rien ne se passe à l'écran lorsque la page s'ouvre ?
+</details>
 
 
