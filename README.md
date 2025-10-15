@@ -505,7 +505,7 @@ Rien ne semble pouvoir troubler le fonctionnement de votre jeu de la vie, ni la 
 
 L'enfer étant pavé de bonnes intentions, l'assureur et le réparateur ont eu la même idée à un ou deux détail près, mais sans en parler entre eux...
 
-<details/>
+</details>
 
 ## 🧭 Étape 5 : Le petit coup de polish de trop
 
