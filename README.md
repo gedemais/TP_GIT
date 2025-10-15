@@ -117,3 +117,28 @@ canvas {
 - Et finalement, pousse son commit sur le répo distant
 
 
+### 4. Synchronisation
+
+![power-power-rangers](https://github.com/user-attachments/assets/08d59d64-bd58-4c8b-881d-d652d5957210)
+
+Pour que tous les membres de l'équipe soient à jour sur les dernières modifications apportées au répo distant, ils doivent les récupérer localement avec la commande :
+
+``` git pull ```
+
+
+## ⚙️ Étape 2 : Première Pull Request
+
+### 1. Création de la pull request
+- L'initiateur doit se rendre sur github et créer une pull request de la branche feature/setup vers la branche main.
+- La pull request ne doit pouvoir être validée que si elle est vérifiée par les trois membres de l'équipe.
+
+
+### 2. Vérification et validation de la pull request
+- Les trois membres de l'équipe passent en revue les modifications apportées par la branche feature/setup, en vérifiant que chaque membre y a bien ajouté le bon fichier avec le bon contenu.
+- Une fois les vérifications effectuées, chaque membre de l'équipe doit vérifier la pull request
+- Une fois la pull request vérifiée, l'initiateur se charge de la valider.
+
+
+
+## 🧭 Étape 3 : Interface utilisateur
+
