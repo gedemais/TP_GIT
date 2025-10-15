@@ -126,7 +126,7 @@ Pour que tous les membres de l'équipe soient à jour sur les dernières modific
 ## ⚙️ Étape 2 : Première Pull Request
 
 ### 1. Création de la pull request
-- L'initiateur doit se rendre sur github et créer une pull request de la branche ```feature/setup``` vers la branche main.
+- L'initiateur doit se rendre sur github et créer une pull request de la branche ```feature/setup``` vers la branche ```main```.
 - La pull request ne doit pouvoir être validée que si elle est vérifiée par les trois membres de l'équipe.
 
 
@@ -145,14 +145,14 @@ Pour que tous les membres de l'équipe soient à jour sur les dernières modific
 
 ### 1. Création des branches
 - L'initiateur créé une nouvelle branche dev
-- L'assureur tire les changements, se rend sur la branche dev, et créé une nouvelle branche feature/ui_html (qui partira donc de ```dev```, et non de ```main```)
-- Le réparateur tire les changements, se rend sur la branche dev, et créé une nouvelle branche feature/ui_css (qui partira donc de ```dev```, et non de ```main```)
+- L'assureur tire les changements, se rend sur la branche dev, et créé une nouvelle branche ```feature/ui_html``` (qui partira donc de ```dev```, et non de ```main```)
+- Le réparateur tire les changements, se rend sur la branche dev, et créé une nouvelle branche ```feature/ui_css``` (qui partira donc de ```dev```, et non de ```main```)
 
 #### Les deux étapes suivantes peuvent être réalisées en même temps.
 
 ### 2. Implémentation du panneau de contrôle
 
-- L'initiateur modifie index.html pour ajouter un panneau de contrôle :
+- L'initiateur modifie index.html pour y ajouter un panneau de contrôle :
 
 ```
 <div id="controls">
@@ -199,8 +199,6 @@ Pour que tous les membres de l'équipe soient à jour sur les dernières modific
 - Rebelotte, tous les membres de l'équipe vérifient la pull request, puis l'initiateur s'occupe de la valider.
 
 
-
-
 ⚙️ Étape 4 : Logique du Jeu de la Vie
 
 Nous allons maintenant implémenter la logique algorithmique du jeu de la vie, afin de l'incorporer au projet pour faire fonctionner notre visualisateur.
@@ -208,7 +206,7 @@ Nous allons maintenant implémenter la logique algorithmique du jeu de la vie, a
 ![Gospers_glider_gun](https://github.com/user-attachments/assets/27146120-8df4-4b2a-a31a-f40319325b51)
 
 ## 1. Création de la branche
-- L'initiateur créé à partir de la branche ```dev``` une branche ```feature/logic``` qui permettra d'implémenter la logique du jeu de la vie.
+- L'initiateur crée à partir de la branche ```dev``` une branche ```feature/logic``` qui permettra d'implémenter la logique du jeu de la vie.
 - Tous les membres de l'équipe tirent les dernières modifications.
 
 
@@ -389,7 +387,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 ## 3. Pull request
 
-- L'initiateur créé une pull request pour ```feature/logic``` vers ```dev``` afin d'intégrer la nouvelle fonctionnalité.
+- L'initiateur crée une pull request pour ```feature/logic``` vers ```dev``` afin d'intégrer la nouvelle fonctionnalité.
 - Les membres de l'équipe la review et la vérifie, puis l'initiateur la valide.
 - Tout le monde tire les changements et se rend sur ```dev``` pour lancer index.html histoire tester la nouvelle fonctionnalité...
 
