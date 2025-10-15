@@ -23,15 +23,97 @@ Votre travail consiste uniquement à **gérer Git** : création de branches, com
 
 ## 📦 Étape 0 : Mise en place de l’équipe et du dépôt
 
-0. Les membres de l'équipe choisissent leurs rôles de départ.
-1. Chaque membre crée son compte GitHub.  
-2. L’**initiateur** crée un **nouveau dépôt public GitHub** nommé :  jeu-de-la-vie
-3. L’initiateur ajoute les deux autres membres comme **collaborateurs**.
-4. Chaque membre **clone le dépôt** dans VSCode :
+- Les membres de l'équipe choisissent leurs rôles de départ.
+- Chaque membre crée son compte GitHub.  
+- L’**initiateur** crée un **nouveau dépôt public GitHub** nommé :  jeu-de-la-vie
+- L’initiateur ajoute les deux autres membres comme **collaborateurs**.
+- Chaque membre **clone le dépôt** dans VSCode :
 ```bash
 git clone https://github.com/<pseudo_github_de_l_initiateur>/jeu-de-la-vie.git
 ```
-5. Les trois membres de l'équipe vérifient qu'ils peuvent pousser des modifications en créant un fichier README_<pseudo_github>.md, et en le poussant sur le répo distant après l'avoir commit.
-6. Les trois membres de l'équipe vérifient qu'ils peuvent tirer les modifications faites par les deux autres membres de leur groupe.
+- Les trois membres de l'équipe vérifient qu'ils peuvent pousser des modifications en créant un fichier README_<pseudo_github>.md, en écrivant leur prénom à l'intérieur, et en le poussant sur le répo distant après l'avoir commit.
+- Une fois l'étape précédente terminée, chaque membre de l'équipe vérifie qu'il peut tirer les modifications faites par les deux autres membres.
+
+📁 Structure du projet (finale)
+```
+jeu-de-la-vie/
+│
+├── index.html
+├── style.css
+├── script.js
+├── README_a.md
+├── README_b.md
+└── README_c.md
+```
+
 
 ## ⚙️ Étape 1 : Initialisation du projet
+
+
+### 1. Installation du fichier HTML
+
+- L’initiateur crée la branche feature/setup
+- Il y ajoute le fichier index.html en y copiant le code HTML suivant :
+```
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Jeu de la Vie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Jeu de la Vie</h1>
+  <canvas id="gameCanvas"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
+```
+
+- Puis, il ajoute le fichier index.html à l'index
+- Créé un nouveau commit pour enregistrer les changements
+- Tire les derniers changements pour s'assurer d'être à jour
+- Et finalement, pousse son commit sur le répo distant
+
+#### Les deux étapes suivantes peuvent être réalisées en même temps.
+
+### 2. Installation du fichier JavaScript
+
+- L'assureur tire (pull) les modifications faites par l'initiateur.
+- Il se déplace sur la branche feature/setup
+- Il y ajoute le fichier scripts.js en y copiant le code JavaScript suivant :
+
+```
+console.log("Jeu de la Vie - Initialisation");
+```
+
+- Puis, il ajoute le fichier scripts.js à l'index
+- Créé un nouveau commit pour enregistrer les changements
+- Tire les derniers changements pour s'assurer d'être à jour
+- Et finalement, pousse son commit sur le répo distant
+
+
+### 3. Installation du fichier CSS
+
+- Le réparateur tire (pull) les modifications faites par l'initiateur.
+- Il se déplace sur la branche feature/setup
+- Il y ajoute le fichier style.css en y copiant le code CSS suivant :
+
+```
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #fafafa;
+}
+
+canvas {
+  border: 1px solid #333;
+}
+
+```
+- Puis, il ajoute le fichier style.css à l'index
+- Créé un nouveau commit pour enregistrer les changements
+- Tire les derniers changements pour s'assurer d'être à jour
+- Et finalement, pousse son commit sur le répo distant
+
+
