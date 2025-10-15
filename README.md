@@ -394,12 +394,46 @@ document.addEventListener("DOMContentLoaded", () => {
 - Tout le monde tire les changements et se rend sur ```dev``` pour lancer index.html histoire tester la nouvelle fonctionnalité...
 
 <details>
-  <summary>Click me</summary>
+  <summary>Spoiler</summary>
+
   ![200w](https://github.com/user-attachments/assets/f8d12336-4cee-4c1c-83fc-8158add8a771)
 
   ## Ca ne marche pas...
 
   Sacrebleu. Le réparateur était pourtant sûr d'avoir correctement implémenté la logique du jeu de la vie ! Alors, pourquoi rien ne se passe à l'écran lorsque la page s'ouvre ?
+  S'agirait-il d'un simple manque de talent ? Un seul moyen d'en être sûr, analyser son code et comprendre d'ou vient l'erreur.
+  Le réparateur doit maintenant réparer son code !
 </details>
 
+## 4. Debugging
+
+- Après une rapide analyse de la logique implémentée dans script.js, on peut voir que la fonction create_grid() est appelée en fin de script pour générer une grille aléatoire :
+
+```
+// --- Initialisation par défaut ---
+createGrid(true); // grille aléatoire
+drawGrid();
+```
+
+Or, cette fonction prend un paramètre booléen, c'est à dire un paramètre qui prend une valeur true / false. Ce paramètre porte le nom "empty" :
+
+```
+// Juste ici ->
+function createGrid(empty = true) {
+  grid = new Array(rows);
+  for (let r = 0; r < rows; r++) {
+    grid[r] = new Array(cols);
+    for (let c = 0; c < cols; c++) {
+      grid[r][c] = empty ? 0 : (Math.random() < 0.5 ? 1 : 0);
+    }
+  }
+  resizeCanvas();
+}
+```
+
+On peut également constater sur la ligne suivante que chaque cellule de la grid est mise à 0, ce qui correspond à une cellule morte, lorsque le paramètre empty est à true :
+
+```
+grid[r][c] = empty ? 0 : (Math.random() < 0.5 ? 1 : 0); // Si empty est vrai, la cellule vaut 0. Sinon, elle a une chance sur deux d'être vivante.
+```
 
