@@ -8,7 +8,7 @@ Vous travaillerez **en trinôme** avec trois rôles bien définis :
 - 🧩 **L’assureur** : relit les pull requests, valide les merges, s’assure de la propreté du dépôt.
 - 🛠️ **Le réparateur** : corrige les bugs, résout les conflits, gère les branches *hotfix*.
 
-Vous ne devez **écrire aucune ligne de HTML, CSS ou JS**.  
+Vous ne devez **écrire aucune ligne de HTML, CSS ou JS**, ou presque.  
 Votre travail consiste uniquement à **gérer Git** : création de branches, commits, merges, pull requests, résolution de conflits, etc.
 
 ---
@@ -16,7 +16,7 @@ Votre travail consiste uniquement à **gérer Git** : création de branches, com
 ## 🧑‍💻 Outils
 - Système : **Windows**
 - Environnement : **VSCode**
-- Utilisation **exclusive du terminal Git intégré à VSCode**
+- Utilisation **exclusive du terminal intégré à VSCode**
 - Aucune interface graphique Git
 
 ---
@@ -31,7 +31,7 @@ Votre travail consiste uniquement à **gérer Git** : création de branches, com
 ```bash
 git clone https://github.com/<pseudo_github_de_l_initiateur>/jeu-de-la-vie.git
 ```
-- Les trois membres de l'équipe vérifient qu'ils peuvent pousser des modifications en créant un fichier README_<pseudo_github>.md, en écrivant leur prénom à l'intérieur, et en le poussant sur le répo distant après l'avoir commit.
+- Les trois membres de l'équipe vérifient qu'ils peuvent pousser des modifications en créant un fichier README_<pseudo_github>.md, en écrivant leur prénom à l'intérieur, et en le poussant sur le répo distant après l'avoir add puis commit.
 - Une fois l'étape précédente terminée, chaque membre de l'équipe vérifie qu'il peut tirer les modifications faites par les deux autres membres.
 
 📁 Structure du projet (finale)
@@ -81,13 +81,13 @@ jeu-de-la-vie/
 
 - L'assureur tire (pull) les modifications faites par l'initiateur.
 - Il se déplace sur la branche ```feature/setup```
-- Il y ajoute le fichier scripts.js en y copiant le code JavaScript suivant :
+- Il y ajoute le fichier script.js en y copiant le code JavaScript suivant :
 
 ```
 console.log("Jeu de la Vie - Initialisation");
 ```
 
-- Puis, il ajoute le fichier scripts.js à l'index
+- Puis, il ajoute le fichier script.js à l'index
 - Créé un nouveau commit pour enregistrer les changements
 - Tire les derniers changements pour s'assurer d'être à jour
 - Et finalement, pousse son commit sur le répo distant
@@ -213,7 +213,7 @@ Nous allons maintenant implémenter la logique algorithmique du jeu de la vie, a
 
 
 ## 2. Implémentation de la logique du jeu de la vie en tant que fonctionnalité
-- Le réparateur se rend sur la branche ```feature/logic```, et remplace le contenu de scripts.js par le code suivant :
+- Le réparateur se rend sur la branche ```feature/logic```, et remplace le contenu de script.js par le code suivant :
 
 ```
 document.addEventListener("DOMContentLoaded", () => {
