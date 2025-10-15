@@ -486,5 +486,49 @@ createGrid(false); // grille aléatoire
 - L'initiateur valide la PR
 - Tout le monde tire les modifications et lance index.html pour tester...
 
+<details>
+<summary>Spoiler</summary>
+
+<img width="1016" height="673" alt="image" src="https://github.com/user-attachments/assets/080d9d49-5fb5-476d-a50c-f2694bbf5a07" />
+
+
 <img width="360" height="203" alt="ca-marche-vraiment-feldup" src="https://github.com/user-attachments/assets/459a0ee8-8807-4022-8cf7-a8f8d5ed0621" />
 
+On peut même effacer toute la grille avec ```w```, et remplir la grille aléatoirement avec ```r``` quand la simulation devient trop répétitive !
+Félicitations, vous êtes des programmeurs en herbe désormais.
+
+
+Rien ne semble pouvoir troubler le fonctionnement de votre jeu de la vie, ni la bonne ambiance qui règne dans votre équipe.
+
+
+![89361fc565f46487b86a4036852bec7f](https://github.com/user-attachments/assets/3625357a-42d2-4262-bba7-1c4189eb0828)
+
+L'enfer étant pavé de bonnes intentions, l'assureur et le réparateur ont eu la même idée à un ou deux détail près, mais sans en parler entre eux...
+
+<details/>
+
+## 🧭 Étape 5 : Le petit coup de polish de trop
+
+### 1. Une histoire de goûts
+- L'assureur et le réparateur n'aiment pas vraiment le fait que le canvas dans lequel se déroule la simulation n'ai pas de bordure claire. "Ca fait bizarre", leur souffle leurs petits doigts.
+- Ils décident donc, chacun de leur côté, de créer une branche feature/colors_by_assureur et feature/colors_by_reparateur à partir de dev pour arranger ça.
+- L'assureur décide de modifier style.css pour avoir une belle bordure bleue :
+```
+canvas {
+  border: 3px solid blue;
+}
+
+```
+- Tandis que le réparateur, qui veut une belle bordure verte (chacun ses goûts), modifie style.css de la manière suivante :
+```
+canvas {
+  border: 5px dashed green;
+}
+```
+
+- Chacun de leur côté, ils ajoutent le fichier style.css à l'index
+- Crééent un nouveau commit pour enregistrer les changements sur leurs branches respectives
+- Tirent les derniers changements pour s'assurer d'être à jour
+- Et finalement, poussent leurs commits sur le répo distant
+
+Touts contents, l'assureur et le réparateur annoncent à l'équipe qu'ils ont fait un super changement de style, et demandent à l'initiateur 
