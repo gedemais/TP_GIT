@@ -52,7 +52,7 @@ jeu-de-la-vie/
 
 ### 1. Installation du fichier HTML
 
-- L’initiateur crée la branche feature/setup
+- L’initiateur crée la branche ```feature/setup```
 - Il y ajoute le fichier index.html en y copiant le code HTML suivant :
 ```
 <!DOCTYPE html>
@@ -80,7 +80,7 @@ jeu-de-la-vie/
 ### 2. Installation du fichier JavaScript
 
 - L'assureur tire (pull) les modifications faites par l'initiateur.
-- Il se déplace sur la branche feature/setup
+- Il se déplace sur la branche ```feature/setup```
 - Il y ajoute le fichier scripts.js en y copiant le code JavaScript suivant :
 
 ```
@@ -96,7 +96,7 @@ console.log("Jeu de la Vie - Initialisation");
 ### 3. Installation du fichier CSS
 
 - Le réparateur tire (pull) les modifications faites par l'initiateur.
-- Il se déplace sur la branche feature/setup
+- Il se déplace sur la branche ```feature/setup```
 - Il y ajoute le fichier style.css en y copiant le code CSS suivant :
 
 ```
@@ -121,24 +121,26 @@ canvas {
 
 ![power-power-rangers](https://github.com/user-attachments/assets/08d59d64-bd58-4c8b-881d-d652d5957210)
 
-Pour que tous les membres de l'équipe soient à jour sur les dernières modifications apportées au répo distant, ils doivent les récupérer localement avec la commande :
-
-``` git pull ```
-
+Pour que tous les membres de l'équipe soient à jour sur les dernières modifications apportées au répo distant, ils doivent les récupérer localement en les tirant.
 
 ## ⚙️ Étape 2 : Première Pull Request
 
 ### 1. Création de la pull request
-- L'initiateur doit se rendre sur github et créer une pull request de la branche feature/setup vers la branche main.
+- L'initiateur doit se rendre sur github et créer une pull request de la branche ```feature/setup``` vers la branche main.
 - La pull request ne doit pouvoir être validée que si elle est vérifiée par les trois membres de l'équipe.
 
 
 ### 2. Vérification et validation de la pull request
-- Les trois membres de l'équipe passent en revue les modifications apportées par la branche feature/setup, en vérifiant que chaque membre y a bien ajouté le bon fichier avec le bon contenu.
+- Les trois membres de l'équipe passent en revue les modifications apportées par la branche ```feature/setup```, en vérifiant que chaque membre y a bien ajouté le bon fichier avec le bon contenu.
 - Une fois les vérifications effectuées, chaque membre de l'équipe doit vérifier la pull request
 - Une fois la pull request vérifiée, l'initiateur se charge de la valider.
 
 
 
 ## 🧭 Étape 3 : Interface utilisateur
+
+C'est bien beau de créer une seule branche pour que tout le monde travaille dessus, mais en pratique ça peut souvent provoquer des conflits, en particulier lorsque l'on travaille à plusieurs sur les mêmes fichiers !<br/>
+Pour éviter ce genre de problème, on créé généralement une branche par fonctionnalité de notre programme, sur laquelle une seule personne va travailler à la fois.
+Cette méthodologie permet de minimiser les conflits pendant l'implémentation de nouvelles fonctionnalités, et de regrouper leurs résolutions au moment de la pull request.
+
 
