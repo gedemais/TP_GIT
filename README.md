@@ -527,8 +527,23 @@ canvas {
 ```
 
 - Chacun de leur côté, ils ajoutent le fichier style.css à l'index
-- Crééent un nouveau commit pour enregistrer les changements sur leurs branches respectives
+- Créent un nouveau commit pour enregistrer les changements sur leurs branches respectives
 - Tirent les derniers changements pour s'assurer d'être à jour
 - Et finalement, poussent leurs commits sur le répo distant
 
-Touts contents, l'assureur et le réparateur annoncent à l'équipe qu'ils ont fait un super changement de style, et demandent à l'initiateur 
+Tout contents, l'assureur et le réparateur annoncent à l'équipe qu'ils ont fait un super changement de style, et demandent à l'initiateur de créer une PR pour chacune de leurs branches.
+
+L'initiateur accepte, et créé les deux PR.
+L'équipe review, puis valide la première PR, avant de tester les changements sur dev. Ils sont époustouflés.
+Puis, les membres retourne sur la PR de la deuxième branche, et crac...
+
+<img width="614" height="69" alt="image" src="https://github.com/user-attachments/assets/d65482cd-3edb-4888-8d4a-fe1ffdf95428" />
+
+Un conflit ! Il semblerait que nos deux équipiers aient modifié la même partie du même fichier chacun à leur sauce...
+
+Vous allez donc devoir débattre entre vous pour décider de la couleur de votre bordure. Après tout, la PR ne peut être validée que lorsque tous les membres de l'équipe l'ont vérifiée...
+(Je compte sur votre diplomatie, pas d'octogones pendant mes cours).
+
+Une fois le conflit résolu, on peut valider la PR.
+
+Pour finaliser le projet et sauvegarder sa dernière version "stable", il est maintenant possible d'ouvrir une dernière PR pour ```dev``` vers ```main```, afin de publier nos changements sur la branche principale du projet.
