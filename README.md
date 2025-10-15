@@ -367,11 +367,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // --- Initialisation par défaut ---
-  createGrid(false); // grille aléatoire
+  createGrid(true); // grille aléatoire
   drawGrid();
 
   // Simulation automatique
-  running = false;
+  running = true;
   intervalId = setInterval(nextGeneration, 1000 / cyclesPerSec);
 
   // --- Console debug ---
@@ -391,8 +391,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 - L'initiateur créé une pull request pour ```feature/logic``` vers ```dev``` afin d'intégrer la nouvelle fonctionnalité.
 - Les membres de l'équipe la review et la vérifie, puis l'initiateur la valide.
-- Tout le monde tire les changements et se rend sur ```dev``` pour tester la nouvelle fonctionnalité
+- Tout le monde tire les changements et se rend sur ```dev``` pour lancer index.html histoire tester la nouvelle fonctionnalité...
 
 ![200w](https://github.com/user-attachments/assets/f8d12336-4cee-4c1c-83fc-8158add8a771)
 
 ## Ca ne marche pas...
+
+Sacrebleu. Le réparateur était pourtant sûr d'avoir correctement implémenté la logique du jeu de la vie ! Alors, pourquoi rien ne se passe à l'écran lorsque la page s'ouvre ?
+
+
