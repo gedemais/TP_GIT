@@ -199,3 +199,75 @@ Pour que tous les membres de l'équipe soient à jour sur les dernières modific
 - Rebelotte, tous les membres de l'équipe vérifient la pull request, puis l'initiateur s'occupe de la valider.
 
 
+
+
+⚙️ Étape 4 : Logique du Jeu de la Vie
+
+Nous allons maintenant implémenter la logique algorithmique du jeu de la vie, afin de l'incorporer au projet pour faire fonctionner notre visualisateur.
+
+![Gospers_glider_gun](https://github.com/user-attachments/assets/27146120-8df4-4b2a-a31a-f40319325b51)
+
+## 1. Création de la branche
+- L'initiateur créé à partir de la branche ```dev``` une branche ```feature/logic``` qui permettra d'implémenter la logique du jeu de la vie.
+- Tous les membres de l'équipe tirent les dernières modifications.
+- Le réparateur se rend sur la branche ```feature/logic```, et remplace le contenu de scripts.js par le code suivant :
+
+```
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
+const cellSize = 20;
+
+let rows = 20;
+let cols = 20;
+let grid = [];
+let interval;
+let running = false;
+
+function createGrid() {
+  grid = new Array(rows).fill(0).map(() => new Array(cols).fill(0));
+}
+
+function drawGrid() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < cols; c++) {
+      ctx.fillStyle = grid[r][c] ? "#000" : "#fff";
+      ctx.fillRect(c * cellSize, r * cellSize, cellSize, cellSize);
+    }
+  }
+}
+
+function nextGeneration() {
+  const newGrid = grid.map(arr => arr.slice());
+  for (let r = 0; r < rows; r++) {
+    for (let c = 0; c < cols; c++) {
+      const neighbors = countNeighbors(r, c);
+      if (grid[r][c] && (neighbors < 2 || neighbors > 3)) newGrid[r][c] = 0;
+      if (!grid[r][c] && neighbors === 3) newGrid[r][c] = 1;
+    }
+  }
+  grid = newGrid;
+  drawGrid();
+}
+
+function countNeighbors(r, c) {
+  let count = 0;
+  for (let i = -1; i <= 1; i++) {
+    for (let j = -1; j <= 1; j++) {
+      if (i === 0 && j === 0) continue;
+      const x = r + i, y = c + j;
+      if (x >= 0 && x < rows && y >= 0 && y < cols) {
+        count += grid[x][y];
+      }
+    }
+  }
+  return count;
+}
+
+// Erreur volontaire : canvas non redimensionné
+drawGrid();
+```
+
+
+
+
