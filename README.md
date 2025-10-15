@@ -193,5 +193,9 @@ Pour que tous les membres de l'équipe soient à jour sur les dernières modific
 ### 4. Pull Requests
 
 - L'initiateur créé deux pull requests, une pour la branche ```feature/ui_html``` vers ```dev```, et une pour la branche ```feature/ui_css``` vers ```dev```
-- Tous les membres de l'équipe vérifient ces deux pull requests, puis le l'initiateur s'occupe de les valider. 
-- Une fois la pull request validée, tous les membres de l'équipe tirent les modifications, et peuvent lancer index.html pour constater l'évolution du produit grâce à l'implémentation des nouvelles fonctionnalités.
+- Tous les membres de l'équipe vérifient ces deux pull requests, puis l'initiateur s'occupe de les valider. 
+- Une fois la pull request validée, tous les membres de l'équipe tirent les modifications, puis se rendent sur ```dev``` pour lancer index.html et constater l'évolution du produit grâce à l'implémentation des nouvelles fonctionnalités.
+- Une fois ce "test" effectué, l'initiateur créé une nouvelle pull request de ```dev``` vers ```main``` afin d'incorporer la fonctionnalité testée au produit final.
+- Rebelotte, tous les membres de l'équipe vérifient la pull request, puis l'initiateur s'occupe de la valider.
+
+
