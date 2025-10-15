@@ -23,5 +23,15 @@ Votre travail consiste uniquement à **gérer Git** : création de branches, com
 
 ## 📦 Étape 0 : Mise en place de l’équipe et du dépôt
 
+0. Les membres de l'équipe choisissent leurs rôles de départ.
 1. Chaque membre crée son compte GitHub.  
-2. L’**initiateur** crée un **nouveau dépôt public GitHub** nommé :  
+2. L’**initiateur** crée un **nouveau dépôt public GitHub** nommé :  jeu-de-la-vie
+3. L’initiateur ajoute les deux autres membres comme **collaborateurs**.
+4. Chaque membre **clone le dépôt** dans VSCode :
+```bash
+git clone https://github.com/<pseudo_github_de_l_initiateur>/jeu-de-la-vie.git
+```
+5. Les trois membres de l'équipe vérifient qu'ils peuvent pousser des modifications en créant un fichier README_<pseudo_github>.md, et en le poussant sur le répo distant après l'avoir commit.
+6. Les trois membres de l'équipe vérifient qu'ils peuvent tirer les modifications faites par les deux autres membres de leur groupe.
+
+## ⚙️ Étape 1 : Initialisation du projet
