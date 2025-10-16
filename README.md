@@ -26,7 +26,7 @@ Votre travail consiste uniquement à **gérer Git** : création de branches, com
 - Les membres de l'équipe choisissent leurs rôles de départ.
 - Chaque membre crée son compte GitHub.  
 - L’**initiateur** crée un **nouveau dépôt public GitHub** nommé :  jeu-de-la-vie
-- L’initiateur ajoute les deux autres membres comme **collaborateurs**.
+- L’initiateur invite les deux autres membres de l'équipe à devenir **collaborateurs** sur le projet.
 - Chaque membre **clone le dépôt** dans VSCode :
 ```bash
 git clone https://github.com/<pseudo_github_de_l_initiateur>/jeu-de-la-vie.git
