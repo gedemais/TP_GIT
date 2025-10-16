@@ -142,7 +142,7 @@ Pour que tous les membres de l'équipe soient à jour sur les dernières modific
 - Afin d'éviter de directement fusionner nos fonctionnalités fraîchement implémentées (et non testées), à notre branche principale (main), on crée une branche intermédiaire appelée ```dev``` qui servira d'espace de test, pour s'assurer du bon fonctionnement de nos fonctionnalités avant de les incorporer à notre produit final.
 
 ### 1. Création des branches
-- L'initiateur créé une nouvelle branche dev
+- L'initiateur créé une nouvelle branche ```dev``` qui part de la branche ```main```
 - L'assureur tire les changements, se rend sur la branche dev, et créé une nouvelle branche ```feature/ui_html``` (qui partira donc de ```dev```, et non de ```main```)
 - Le réparateur tire les changements, se rend sur la branche dev, et créé une nouvelle branche ```feature/ui_css``` (qui partira donc de ```dev```, et non de ```main```)
 
