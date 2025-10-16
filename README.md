@@ -75,8 +75,6 @@ jeu-de-la-vie/
 - Tire les derniers changements pour s'assurer d'être à jour
 - Et finalement, pousse son commit sur le répo distant
 
-#### Les deux étapes suivantes peuvent être réalisées en même temps.
-
 ### 2. Installation du fichier JavaScript
 
 - L'assureur tire (pull) les modifications faites par l'initiateur.
@@ -147,8 +145,6 @@ Pour que tous les membres de l'équipe soient à jour sur les dernières modific
 - L'initiateur créé une nouvelle branche dev
 - L'assureur tire les changements, se rend sur la branche dev, et créé une nouvelle branche ```feature/ui_html``` (qui partira donc de ```dev```, et non de ```main```)
 - Le réparateur tire les changements, se rend sur la branche dev, et créé une nouvelle branche ```feature/ui_css``` (qui partira donc de ```dev```, et non de ```main```)
-
-#### Les deux étapes suivantes peuvent être réalisées en même temps.
 
 ### 2. Implémentation du panneau de contrôle
 
