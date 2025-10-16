@@ -2,10 +2,10 @@
 
 ## 🎯 Objectifs du TP
 Ce TP a pour but de vous apprendre à utiliser **Git** et **GitHub** dans un cadre de travail collaboratif.  
-Vous travaillerez **en trinôme** avec trois rôles bien définis :
+Vous travaillerez **en trinôme** avec trois rôles donnés à titre indicatif :
 
 - 🧱 **L’initiateur** : crée le dépôt, initialise le projet et les premières branches.
-- 🧩 **L’assureur** : relit les pull requests, valide les merges, s’assure de la propreté du dépôt.
+- 🧩 **L’assureur** : relit les pull requests, valide les merges, s’assure de la bonne structure du dépôt.
 - 🛠️ **Le réparateur** : corrige les bugs, résout les conflits, gère les branches *hotfix*.
 
 Vous ne devez **écrire aucune ligne de HTML, CSS ou JS**, ou presque.  
