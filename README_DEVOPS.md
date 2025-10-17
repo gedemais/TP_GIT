@@ -219,39 +219,47 @@ on:
   push:
     branches: [main]
 
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   ci:
+    name: Intégration Continue (Lint + Tests)
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout du code
+      - name: 🧾 Checkout du code
         uses: actions/checkout@v4
 
-      - name: Installation Node.js
+      - name: ⚙️ Installation de Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
 
-      - name: Installation des dépendances
+      - name: 📦 Installation des dépendances
         run: npm ci
 
-      - name: Lint du code
+      - name: 🧹 Lint du code
         run: npm run lint
 
-      - name: Tests unitaires
+      - name: 🧪 Tests unitaires
         run: npm test
 
   cd:
+    name: Déploiement Continu (Docker)
     needs: ci
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
+
     steps:
-      - name: Checkout du code
+      - name: 🧾 Checkout du code
         uses: actions/checkout@v4
 
-      - name: Construction de l'image Docker
+      - name: 🐳 Construction de l'image Docker
         run: docker build -t calculatrice-web .
 
-      - name: Lancement de l’application en local
+      - name: 🚀 Lancement du conteneur Docker
         run: docker run -d -p 8080:80 calculatrice-web
 ```
 
@@ -262,17 +270,22 @@ Il add, commit et push ces changements.
 
 Le réparateur tire les modifications en local, puis se déplace sur la branche ```infra/ci_cd_setup```, et ajoute un fichier nommé ```Dockerfile``` en y copiant le code suivant :
 ```
-# Étape 1 : image de base
+# Étape 1 : image de base légère
 FROM node:18-alpine
 
-# Étape 2 : installation d’un serveur simple
+# Étape 2 : installation du serveur statique "serve"
 RUN npm install -g serve
 
-# Étape 3 : copie des fichiers
+# Étape 3 : définition du répertoire de travail
 WORKDIR /app
+
+# Étape 4 : copie des fichiers du projet dans le conteneur
 COPY . .
 
-# Étape 4 : lancement du serveur
+# Étape 5 : exposer le port 80 pour le serveur web
+EXPOSE 80
+
+# Étape 6 : commande de lancement du serveur
 CMD ["serve", "-s", ".", "-l", "80"]
 ```
 
