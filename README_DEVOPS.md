@@ -79,7 +79,7 @@ Puis, il créé ```index.html``` et y ajoute le code suivant :
     <input id="display" readonly />
     <div id="buttons"></div>
   </div>
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>
 ```
