@@ -157,7 +157,7 @@ Puis, l'initiateur et le réparateur tirent les changements en local, et se dép
 - L'initiateur créé une branche ```feature/addition``` (partant de ```dev```) pour implémenter l'addition
 - L'assureur créé une branche ```feature/substraction``` (partant de ```dev```) pour implémenter la soustraction
 - Le réparateur créé une branche ```feature/multiplication``` (partant de ```dev```) pour implémenter la multiplication
-- Jouez à pierre feuille ciseaux pour déterminer qui créera la branche ```feature/``` pour implémenter la division
+- Jouez à pierre feuille ciseaux pour déterminer qui créera la branche ```feature/division``` pour implémenter la division
 - Celui ou celle qui fait un puits perd d'office et doit implémenter la division.
 - Initiateur VS Réparateur, puis le/la gagnant(e) contre l'assureur. 
 
