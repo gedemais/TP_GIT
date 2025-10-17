@@ -1,7 +1,7 @@
 # TP Git – Collaboration en trinôme : Jeu de la Vie (HTML/CSS/JS)
 
 ## 🎯 Objectifs du TP
-Ce TP a pour but de vous apprendre à utiliser **Git** et **GitHub** dans un cadre de travail collaboratif.  
+Ce TP a pour but de vous apprendre à utiliser **Git** via **GitHub** dans un cadre de travail collaboratif.  
 Vous travaillerez **en trinôme** avec trois rôles donnés à titre indicatif :
 
 - 🧱 **L’initiateur** : crée le dépôt, initialise le projet et les premières branches.
@@ -24,7 +24,7 @@ Votre travail consiste uniquement à **gérer Git** : création de branches, com
 ## 📦 Étape 0 : Mise en place de l’équipe et du dépôt
 
 - Les membres de l'équipe choisissent leurs rôles de départ.
-- Chaque membre crée son compte GitHub.  
+- Chaque membre se connecte à son compte GitHub.  
 - L’**initiateur** crée un **nouveau dépôt public GitHub** nommé :  jeu-de-la-vie
 - L’initiateur invite les deux autres membres de l'équipe à devenir **collaborateurs** sur le projet.
 - Chaque membre **clone le dépôt** dans VSCode :
@@ -125,7 +125,7 @@ Pour que tous les membres de l'équipe soient à jour sur les dernières modific
 
 ### 1. Création de la pull request
 - L'initiateur doit se rendre sur github et créer une pull request de la branche ```feature/setup``` vers la branche ```main```.
-- La pull request ne doit pouvoir être validée que si elle est vérifiée par les trois membres de l'équipe.
+- La pull request ne doit pouvoir être validée que si elle est vérifiée par les trois membres de l'équipe. Il faut les ajouter en tant que reviewers sur la pull request.
 
 
 ### 2. Vérification et validation de la pull request
@@ -168,7 +168,8 @@ Pour que tous les membres de l'équipe soient à jour sur les dernières modific
 
 ### 3. Amélioration du style du panneau de contrôle
 
-- L'assureur modifie style.css pour styliser le panneau de contrôle :
+- L'assureur se rend sur la branche ```feature/ui_css``` qu'il vient de créer
+- Et modifie style.css pour styliser le panneau de contrôle :
 
 ```
 #controls {
@@ -189,25 +190,21 @@ Pour que tous les membres de l'équipe soient à jour sur les dernières modific
 ### 4. Pull Requests
 
 - L'initiateur créé deux pull requests, une pour la branche ```feature/ui_html``` vers ```dev```, et une pour la branche ```feature/ui_css``` vers ```dev```
-- Tous les membres de l'équipe vérifient ces deux pull requests, puis l'initiateur s'occupe de les valider. 
-- Une fois la pull request validée, tous les membres de l'équipe tirent les modifications, puis se rendent sur ```dev``` pour lancer index.html et constater l'évolution du produit grâce à l'implémentation des nouvelles fonctionnalités.
+- Tous les membres de l'équipe vérifient ces deux pull requests, puis l'initiateur s'occupe de les valider.
+- Une fois les pull requests validées, tous les membres de l'équipe tirent les modifications en local, puis se rendent sur ```dev``` pour lancer index.html et constater l'évolution du produit grâce à l'implémentation des nouvelles fonctionnalités.
 - Une fois ce "test" effectué, l'initiateur créé une nouvelle pull request de ```dev``` vers ```main``` afin d'incorporer la fonctionnalité testée au produit final.
-- Rebelotte, tous les membres de l'équipe vérifient la pull request, puis l'initiateur s'occupe de la valider.
 
-
-⚙️ Étape 4 : Logique du Jeu de la Vie
+## ⚙️ Étape 4 : Logique Algorithmique du Jeu de la Vie
 
 Nous allons maintenant implémenter la logique algorithmique du jeu de la vie, afin de l'incorporer au projet pour faire fonctionner notre visualisateur.
 
 ![Gospers_glider_gun](https://github.com/user-attachments/assets/27146120-8df4-4b2a-a31a-f40319325b51)
 
-## 1. Création de la branche
+## 1. Création d'une branche dédiée
 - L'initiateur crée à partir de la branche ```dev``` une branche ```feature/logic``` qui permettra d'implémenter la logique du jeu de la vie.
-- Tous les membres de l'équipe tirent les dernières modifications.
-
 
 ## 2. Implémentation de la logique du jeu de la vie en tant que fonctionnalité
-- Le réparateur se rend sur la branche ```feature/logic```, et remplace le contenu de script.js par le code suivant :
+- Le réparateur se rend sur la branche ```feature/logic```, et remplace le contenu de script.js par le code suivant (dans un monde idéal, il devrait le faire en plusieurs commits pour une meilleure tracabilité des changements, car là ca fait pas mal de code) :
 
 ```
 document.addEventListener("DOMContentLoaded", () => {
@@ -431,7 +428,7 @@ On peut également constater sur la ligne suivante que chaque cellule de la gril
 grid[r][c] = empty ? 0 : (Math.random() < 0.5 ? 1 : 0); // Si empty est vrai, la cellule vaut 0. Sinon, elle a une chance sur deux d'être vivante.
 ```
 
-Mais... on l'appelle bel et bien avec empty = true en fin de script !
+Mais... on appelle bel et bien createGrid avec le paramètre true en fin de script !
 ```
 createGrid(true); // <- Pourquoi ??
 ```
@@ -464,7 +461,7 @@ L'utilisation de ces préfixes n'est pas obligatoire d'un point de vue **techniq
 ### 1. Réparation
 
 - Le réparateur créé une branche ```fix/create_grid_parameter``` à partir de ```dev```
-- Il modifie le code afin de réparer son erreur :
+- Il se rend dessus, puis modifie le code afin de réparer son erreur :
 ```
 createGrid(false); // grille aléatoire
 ```
@@ -476,7 +473,7 @@ createGrid(false); // grille aléatoire
 
 ### 2. Pull request
 - L'initiateur créé une pull request pour ```fix/create_grid_parameter``` vers ```dev``` avec les modalités habituelles.
-- L'ensemble de l'équipe review le changement apporté par la branche (et peut même laisser un commentaire sous la ligne modifiée pour le charrier un peu), avant de valider la PR.
+- L'ensemble de l'équipe review le changement apporté par la branche (et peut même laisser un commentaire sous la ligne modifiée pour charrier un peu le réparateur).
 - L'initiateur valide la PR
 - Tout le monde tire les modifications et lance index.html pour tester...
 
@@ -506,14 +503,14 @@ L'enfer étant pavé de bonnes intentions, l'assureur et le réparateur ont eu l
 ### 1. Une histoire de goûts
 - L'assureur et le réparateur n'aiment pas vraiment le fait que le canvas dans lequel se déroule la simulation n'ai pas de bordure claire. "Ca fait bizarre", leur souffle leurs petits doigts.
 - Ils décident donc, chacun de leur côté, de créer une branche feature/colors_by_assureur et feature/colors_by_reparateur à partir de dev pour arranger ça.
-- L'assureur décide de modifier style.css pour avoir une belle bordure bleue :
+- L'assureur se rend sur sa branche, et modifie style.css pour avoir une belle bordure bleue :
 ```
 canvas {
   border: 3px solid blue;
 }
 
 ```
-- Tandis que le réparateur, qui veut une belle bordure verte (chacun ses goûts), modifie style.css de la manière suivante :
+- Tandis que le réparateur, qui veut une belle bordure verte (chacun ses goûts), se rend sur sa branche et modifie style.css de la manière suivante :
 ```
 canvas {
   border: 5px dashed green;
@@ -525,7 +522,7 @@ canvas {
 - Tirent les derniers changements pour s'assurer d'être à jour
 - Et finalement, poussent leurs commits sur le répo distant
 
-Tout contents, l'assureur et le réparateur annoncent à l'équipe qu'ils ont fait un super changement de style, et demandent à l'initiateur de créer une PR pour chacune de leurs branches.
+Tout contents, l'assureur et le réparateur annoncent à l'équipe qu'ils ont fait un super changement de style, et demandent à l'initiateur de créer une PR pour chacune de leurs branches afin de pouvoir les merge sur ```dev```.
 
 L'initiateur accepte, et créé les deux PR.
 L'équipe review, puis valide la première PR, avant de tester les changements sur dev. Ils sont époustouflés.
