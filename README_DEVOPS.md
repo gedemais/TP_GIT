@@ -112,7 +112,7 @@ body {
 ```
 
 ### 4. Ajout du JS de base :
-Il créé ensuite ```scripts.js```, et y ajoute le code suivant :
+Il créé ensuite ```script.js```, et y ajoute le code suivant :
 ```
 document.addEventListener("DOMContentLoaded", () => {
   const display = document.getElementById("display");
