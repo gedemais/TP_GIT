@@ -311,9 +311,9 @@ Ce qui leur permettra de vérifier si la page web est correctement servie, en vi
 
 - Les PR ne peuvent être mergée qu’après validation de tous les membres de la team.
 
-- Une fois les 4 opérations implémentées, merge, et testées ensemble sur ```dev```, créez une PR de dev → main
+- Une fois les 4 opérations implémentées, merge, et testées ensemble sur ```dev``` (même procédure qu'à la fin de l'étape 6), créez une PR de dev → main
 
 - Sur main, la pipeline CD se déclenche de la même manière.
 
-🐳 build Docker + run serveur web
+Une fois que ```dev``` est merge sur ```main```, vous pouvez vous rendre sur dev et tester de nouveau que tout fonctionne bien en lancant votre container docker.
 
